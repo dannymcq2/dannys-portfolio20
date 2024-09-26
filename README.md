@@ -20,7 +20,7 @@ Site can be accessed at :
 ## Usage
 
     ```md
-    ![alt text](public/Screenshot 2024-09-25 at 7.55.36 PM.png) 
+    ![alt text](![alt text](Screenshot 2024-09-25 at 7.55.36 PM.png)) 
     ```
 
 ## Features

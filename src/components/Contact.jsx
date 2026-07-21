@@ -27,36 +27,38 @@ function Contact() {
 
   return (
     <section>
-      <h2>Contact</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          />
-          {errors.name && <span>{errors.name}</span>}
-        </div>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          />
-          {errors.email && <span>{errors.email}</span>}
-        </div>
-        <div>
-          <label>Message:</label>
-          <textarea
-            value={formData.message}
-            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          />
-          {errors.message && <span>{errors.message}</span>}
-        </div>
-        <button type="submit">Send</button>
-      </form>
+      <div className="card">
+        <h2>Contact</h2>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Name:</label>
+            <input
+              type="text"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            />
+            {errors.name && <span className="form-error">{errors.name}</span>}
+          </div>
+          <div className="form-group">
+            <label>Email:</label>
+            <input
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            />
+            {errors.email && <span className="form-error">{errors.email}</span>}
+          </div>
+          <div className="form-group">
+            <label>Message:</label>
+            <textarea
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            />
+            {errors.message && <span className="form-error">{errors.message}</span>}
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </section>
   );
 }

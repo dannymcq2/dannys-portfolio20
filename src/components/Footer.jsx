@@ -1,11 +1,8 @@
-
-import React from 'react';
-
 function Footer() {
   return (
-    <footer style={footerStyle}>
+    <footer className="footer" id="footer">
       <p>&copy; {new Date().getFullYear()} Danny McHugh.</p>
-      <ul style={socialLinksStyle}>
+      <ul className="social-links">
         <li>
           <a href="https://github.com/dannymcq2" target="_blank" rel="noopener noreferrer">
             GitHub
@@ -21,28 +18,9 @@ function Footer() {
             Stack Overflow
           </a>
         </li>
-        {}
       </ul>
     </footer>
   );
 }
-
-const footerStyle = {
-    padding: "100px 300px", 
-    backgroundColor: "#333",
-    color: "#fff",
-    textAlign: "center",
-    left: "0",
-    bottom: "0",
-    width: "100%",
-  };
-
-const socialLinksStyle = {
-  listStyle: "none",
-  padding: 0,
-  display: "flex",
-  justifyContent: "center",
-  gap: "5px",
-};
 
 export default Footer;

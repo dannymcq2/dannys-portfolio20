@@ -45,15 +45,14 @@ function Portfolio() {
             <div key={index} className="project">
               <h3>{project.title}</h3>
               <img
-  src={project.image}
-  alt={`${project.title} screenshot`}
-  style={{ width: '250px', height: '250px', borderRadius: '10px' }}  
-/>
-              <p>
+                src={project.image}
+                alt={`${project.title} screenshot`}
+                className="project-image"
+              />
+              <p className="project-links">
                 <a href={project.appLink} target="_blank" rel="noopener noreferrer">
                   View App
                 </a>
-                {' | '}
                 <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
                   GitHub Repo
                 </a>
